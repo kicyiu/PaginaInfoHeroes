@@ -24,9 +24,14 @@ export class HeroesComponent implements OnInit {
     console.log(this.heroes);
   }
 
+  verHeroe(heroe) {
+    let idx = this._heroesService.getHeroeIndex(heroe);
+    this.router.navigate( ['/heroe', idx] );
+  }
   
+  /*
   verHeroe(idx:number) {
     this.router.navigate( ['/heroe', idx] );
-  } 
+  } */
 
 }
